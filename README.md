@@ -5,6 +5,6 @@ Captain RAYmond Holt is a renderer programmed mainly in cpp, by me and my fellow
 Here are some renders we created with RAYmond Holt:
 
 
-![alt text](https://github.com/PhilippZie/Captain_RAYmond_Holt/blob/main/blender_exporter_task/noisy.exr
+![alt text](https://github.com/PhilippZie/Captain_RAYmond_Holt/blob/main/blender_exporter_task/noisy.exr?raw=true)
 
 

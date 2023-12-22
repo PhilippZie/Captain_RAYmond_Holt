@@ -1,0 +1,43 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"blender_exporter/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "plugins",
+			"destination" : "plugins",
+			"paths" : 
+			[
+				"build/lightwave_blender.zip"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "blender_exporter",
+		"source" : "blender_exporter"
+	}
+}

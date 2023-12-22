@@ -1,3 +1,3 @@
-# Captain_RAYmond_Holt
+# May I introduce you to Captain RAYmond Holt?
 
-hello
+Captain RAYmond Holt is a renderer programmed mainly in cpp, by me and my fellow student Julian for the Computer Graphics lecture at University. 

@@ -4,7 +4,7 @@ Captain RAYmond Holt is a renderer programmed mainly in cpp, by me and my fellow
 
 Here are some renders we created with RAYmond Holt:
 
-![Nice Scene!](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/1e1a4c60-91af-47c0-8ab0-3b753f91da87)
+![Nice Scene!](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/images/noisy.exr)
 
 ![A glass bunny](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/91cd3e83-52fe-46b9-b533-bcd01383e330)
 

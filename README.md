@@ -4,8 +4,11 @@ Captain RAYmond Holt is a renderer programmed mainly in cpp, by me and my fellow
 
 Here are some renders we created with RAYmond Holt:
 
-![Nice Scene!](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/images/noisy.exr)
+![Diffuse cat burger](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/b6cca79a-16f9-49cb-a68b-89bb9ec54f73)
 
-![A glass bunny](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/91cd3e83-52fe-46b9-b533-bcd01383e330)
 
-![A diffuse cat burger](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/1277b187-60ee-4fca-aaca-b569e0932252)
+![Glass bunny](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/fdb7cec1-b149-4ad3-9d77-c07d41f4e239)
+
+
+![Nice scene](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/cf2f9482-511e-4baa-8b55-6453ae050b09)
+

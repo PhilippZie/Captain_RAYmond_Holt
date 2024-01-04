@@ -9,10 +9,12 @@ Here are some renders we created with RAYmond Holt:
 ## Dielectric bsdf
 ![Glass bunny](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/fdb7cec1-b149-4ad3-9d77-c07d41f4e239)
 
+## Rough dielectric bsdf
+![dielectric_rough](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/19de08b8-227b-4825-8d27-6de95902340c)
+
 ## Nice scene
 ![Nice scene](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/cf2f9482-511e-4baa-8b55-6453ae050b09)
 
-## Rough dielectric
-![dielectric_rough](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/19de08b8-227b-4825-8d27-6de95902340c)
+
 
 

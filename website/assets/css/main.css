@@ -3461,6 +3461,11 @@ input, select, textarea {
 				width: 35vw;
 			}
 
+			#wrapper > section > .content > section > header p{
+				/*width: 35vw;*/
+				text-align: justify;
+			}
+
 		#wrapper > section.intro > header > * {
 			width: 20rem;
 		}
@@ -3710,11 +3715,11 @@ input, select, textarea {
 				}
 
 					#wrapper > section > header {
-						padding: 4rem 4rem;
+						padding: 4rem 4rem 0.5rem 4rem;
 					}
 
 					#wrapper > section > .content {
-						padding: 4rem 4rem;
+						padding: 0 4rem 0 4rem;
 					}
 
 						#wrapper > section > .content > section {
@@ -3746,13 +3751,13 @@ input, select, textarea {
 			}
 
 				#wrapper > section > header {
-					padding: 3rem 2rem;
+					padding: 3rem 2rem 0rem 3rem;
 				}
 
 				#wrapper > section > .content {
-					padding: 3rem 2rem;
+					padding: 0 3rem 0 2rem;
 				}
-
+				
 					#wrapper > section > .content > section {
 						margin: 3rem 0;
 					}

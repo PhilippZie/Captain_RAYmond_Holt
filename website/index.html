@@ -93,7 +93,11 @@
 								<section id="roughdielectric">
 									<header>
 										<h3>Rough dielectric</h3>
-										<p>We decided to implement the rough dielectric because it looks very interesting. You can see the basic idea in the two bunny pictures on the right. It also makes beautiful subtle details possible. For example look a bit more closely to the whiskey bottle as well as the ice cubes in the glass. The left of the pictures features only regular dielectrics. In the picture on the right, the Bottle is rendered with a roughness of 0.15 and the ice cubes are rendered with a roughness of 0.4. The glass pane is rendered with a roughness of 0.06</p>
+										<p>We decided to implement the rough dielectric because it looks very interesting. 
+											You can see the basic idea in the two bunny pictures on the right. 
+											It also makes beautiful subtle details possible. For example look a bit more closely to the whiskey bottle as well as the ice cubes in the glass. 
+											The left pictures features only regular dielectrics. In the pictures on the right, the Bottle is rendered with a roughness of 0.15 and 
+											the ice cubes are rendered with a roughness of 0.4. The glass pane is rendered with a roughness of 0.06</p>
 									</header>
 									<div class="content">
 										<div class="gallery">
@@ -109,8 +113,8 @@
 								<section>
 									<header>
 										<h3>Shading Normals</h3>
-										<p>Using normals for shading is a really simple way of adding extra detail to textures, without building complicated meshes. thus we decided to implement it.
-											As one can see on the right adding a normal map to a brickwall makes it look more realistic with a certain amount of depth to it, although the underlying mesh is the same.
+										<p>Using normals for shading is a really simple way of adding extra detail to textures without building complicated meshes. So it was clear that we should implement it.
+											As one can see adding a normal map to a brickwall makes it look more realistic with a certain amount of depth to it, although the underlying mesh stays the same.
 										</p>
 									</header>
 									<div class="content">
@@ -130,8 +134,8 @@
 										<h3>Area Light sampling</h3>
 										<p>We wanted to use an area light for the train interior, so we implemented basic area light sampling.
 											An Area Light produces less noise than a point light inside the train. 
-											Furthermore the Sunlight in our scene looked better with an area light than with a directional light or a point light.
-											It casts smoother shadows which we really on the train seats, which looks more realistic. </p>
+											Furthermore the Sunlight in our scene looked better with an area light than with a directional or a point light.
+											It casts smoother shadows on the train seats, which looks more realistic. </p>
 									</header>
 									<div class="content">
 										<div class="gallery">
@@ -148,7 +152,9 @@
 								<section>
 									<header>
 										<h3>Denoising</h3>
-										<p>Denoising is probably one of the features with the highest impact. Especially with the rough dielectric, which can produce quite some noise in the scene, for example when point lights are involved. Therefore we thought this feature is a must.</p>
+										<p>Denoising is probably one of the features with the highest impact. Especially with the rough dielectric, 
+											which can produce quite some noise in the scene, for example when point lights are involved. 
+											Therefore we thought this feature is a must.</p>
 									</header>
 									<div class="content">
 										<div class="gallery">

@@ -1,0 +1,74 @@
+<scene id="scene">
+  <camera type="perspective">
+    <integer name="width" value="1920"/>
+    <integer name="height" value="1080"/>
+    <float name="fov" value="70"/>
+    <string name="fovAxis" value="x"/>
+    <transform>
+      <matrix value="0.5324,0.094955,-0.84115,6.8724,  0.84649,-0.059722,0.52904,-3.3453,  -5.8584e-08,-0.99369,-0.11217,2.3282,  0,0,0,1"/>
+    </transform>
+  </camera>
+  <light type="point" position="5.8089,-2.0919,3.6733" power="1000,1000,1000"/>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="image" filename="textures/Wood_basecolor.jpg"/>
+      <texture name="roughness" type="image" filename="textures/Wood_roughness.jpg" linear="true"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <texture name="normal" type="image" filename="textures/Wood_normal.jpg" linear="true"/>
+    <shape type="mesh" filename="meshes/Cube.001.ply"/>
+    <transform>
+      <matrix value="5,0,0,0,  0,5,0,0,  0,0,0.01,-0.058088,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="image" filename="textures/plane_divided_DefaultMaterial_BaseColor.jpg"/>
+      <texture name="roughness" type="image" filename="textures/plane_divided_DefaultMaterial_Roughness.jpg" linear="true"/>
+      <texture name="metallic" type="constant" value="1"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <texture name="normal" type="image" filename="textures/plane_divided_DefaultMaterial_Normal.jpg" linear="true"/>
+    <shape type="mesh" filename="meshes/Sphere.ply"/>
+    <transform>
+      <matrix value="1,0,0,-1,  0,1,0,-1,  0,0,1,1,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="image" filename="textures/Metal_basecolor.jpg"/>
+      <texture name="roughness" type="constant" value="0"/>
+      <texture name="metallic" type="constant" value="1"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <texture name="normal" type="image" filename="textures/Metal_normal.jpg" linear="true"/>
+    <shape type="mesh" filename="meshes/Cube.002.ply"/>
+    <transform>
+      <matrix value="1,0,0,1.295,  0,1,0,2.2404,  0,0,1,1.0701,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.20612,0.8,0.33694"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cylinder.001.ply"/>
+    <transform>
+      <matrix value="0.45786,0,0,3.5665,  0,0.45786,0,2.7378,  0,0,0.45786,0.45513,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <light type="envmap">
+    <texture type="image" filename="textures/classroom_2_aa5a808b-46ab-46c0-a793-a18ff84d880b.exr.exr" border="clamp" linear="true"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+    </transform>
+  </light>
+</scene>
+<integrator type="pathtracer" depth="3" nee="true" mis="true">
+  <ref id="scene"/>
+  <image id="noisy"/>
+  <sampler type="independent" count="64"/>
+</integrator>

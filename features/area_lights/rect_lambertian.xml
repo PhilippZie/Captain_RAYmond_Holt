@@ -1,0 +1,55 @@
+<scene id="scene">
+  <camera type="perspective">
+    <integer name="width" value="1080"/>
+    <integer name="height" value="720"/>
+    <float name="fov" value="90"/>
+    <string name="fovAxis" value="x"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,-0.24938,0.96841,-6.9258,  0,-0.96841,-0.24938,2.4583,  0,0,0,1"/>
+    </transform>
+  </camera>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.8,0.8,0.8"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Plane.ply"/>
+    <transform>
+      <matrix value="10,0,0,0,  0,10,0,0,  0,0,1,0,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.093274,0.28534,0.8"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0.7619"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Sphere.ply"/>
+    <transform>
+      <matrix value="1,0,0,-0.64321,  0,1,0,0.088748,  0,0,1,1,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <shape type="rectangle"/>
+    <transform>
+      <matrix value="0.34733,-0.11114,-0.68413,1.7768,  0.35967,0.10733,0.66066,-2.4888,  0,0.47553,-0.30902,2.3187,  0,0,0,1"/>
+    </transform>
+    <emission type="lambertian">
+      <texture name="emission" type="constant" value="50,50,50"/>
+    </emission>
+  </instance>
+  <light type="envmap">
+    <texture type="constant" value="0.050876,0.050876,0.050876"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+    </transform>
+  </light>
+</scene>
+<integrator type="pathtracer" depth="5" nee="true" mis="true">
+  <ref id="scene"/>
+  <image id="rect_lambertian"/>
+  <sampler type="independent" count="64"/>
+</integrator>

@@ -1,0 +1,35 @@
+<scene id="scene">
+  <camera type="perspective">
+    <integer name="width" value="960"/>
+    <integer name="height" value="520"/>
+    <float name="fov" value="39.598"/>
+    <string name="fovAxis" value="x"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,-0.35837,0.93358,-8.6844,  0,-0.93358,-0.35837,4.6431,  0,0,0,1"/>
+    </transform>
+  </camera>
+  <light type="point" position="4.0762,1.0055,5.9039" power="1000,1000,1000"/>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.5"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <texture name="normal" type="image" filename="textures/stone_wall_normal.jpg" linear="true"/>
+    <shape type="mesh" filename="meshes/Plane001.ply"/>
+    <transform>
+      <matrix value="1.6056,0,0,0,  0,1.3905,-1.3766,0,  0,0.8028,2.3844,1.3486,  0,0,0,1"/>
+    </transform>
+  </instance>
+</scene>
+<integrator type="pathtracer" depth="3" nee="true" mis="true">
+  <ref id="scene"/>
+  <image id="brickwall_after_shading_normals2"/>
+  <sampler type="independent" count="64"/>
+</integrator>
+<integrator type="normals">
+  <ref id="scene"/>
+  <image id="brickwall_normals"/>
+  <sampler type="independent" count="64"/>
+</integrator>

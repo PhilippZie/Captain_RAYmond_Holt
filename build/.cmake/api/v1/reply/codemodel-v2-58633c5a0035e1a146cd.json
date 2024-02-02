@@ -1,0 +1,129 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "deps/miniz",
+					"jsonFile" : "directory-deps.miniz-Release-e4ef09a7e2f414af55b3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "deps/miniz",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "blender_exporter",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-blender_exporter-Release-d6db1c8d577a2a8c2fb5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "blender_exporter",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						2
+					],
+					"name" : "lightwave",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "miniz",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Captain_RAYmond_Holt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Captain_RAYmond_Holt-Release-6b10d6f16b2d92d56390.json",
+					"name" : "Captain_RAYmond_Holt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "lightwave_blender::@a5b9dd63f3ed4f7e77d1",
+					"jsonFile" : "target-lightwave_blender-Release-a56a736a511a02253951.json",
+					"name" : "lightwave_blender",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "miniz::@eae18536e793f51aa380",
+					"jsonFile" : "target-miniz-Release-590b37964b15e8bb34a9.json",
+					"name" : "miniz",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/philipp/Dev/Computer Graphics/beedrill/build",
+		"source" : "/Users/philipp/Dev/Computer Graphics/beedrill"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

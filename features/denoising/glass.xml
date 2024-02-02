@@ -1,0 +1,84 @@
+<scene id="scene">
+  <camera type="perspective">
+    <integer name="width" value="1920"/>
+    <integer name="height" value="1080"/>
+    <float name="fov" value="60"/>
+    <string name="fovAxis" value="x"/>
+    <transform>
+      <matrix value="-1.4505e-07,0.17365,-0.98481,3,  1,-2.742e-07,2.1897e-08,0,  -8.6469e-08,-0.98481,-0.17365,1.5898,  0,0,0,1"/>
+    </transform>
+  </camera>
+  <instance>
+    <bsdf type="roughdielectric">
+      <texture name="ior" type="constant" value="1.45"/>
+      <texture name="transmittance" type="constant" value="1,1,1"/>
+      <texture name="reflectance" type="constant" value="1,1,1"/>
+      <texture name="roughness" type="constant" value="0.2"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.ply"/>
+    <transform>
+      <matrix value="0.052526,0,0,-0.90335,  0,0.58692,0,0.28755,  0,0,0.58692,0.58692,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <light type="point" position="3.2985,-0.70546,3.4123" power="500,500,500"/>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.8,0.8,0.8"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Plane.ply"/>
+    <transform>
+      <matrix value="6.5979,0,0,0,  0,6.5979,0,0,  0,0,6.5979,0,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.66742,0.17464,0.8"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0.28571"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cylinder.ply"/>
+    <transform>
+      <matrix value="-0.27792,0,0,-2.5267,  0,-0.27792,0,-0.3367,  0,0,-0.27792,0.27792,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="conductor">
+      <texture name="reflectance" type="constant" value="1,0.7,0.3"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.001.ply"/>
+    <transform>
+      <matrix value="0.2823,0,0,-1.6111,  0,0.2823,0,-1.4469,  0,0,0.2823,0.2823,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <light type="envmap">
+    <texture type="image" filename="textures/field_in_forest_2K_edc44015-4523-411b-9a53-86406a4e8187.exr.exr" border="clamp" linear="true"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+    </transform>
+  </light>
+</scene>
+<integrator type="pathtracer" depth="10" nee="true" mis="true">
+  <ref id="scene"/>
+  <image id="glass_8_samples"/>
+  <sampler type="independent" count="8"/>
+</integrator>
+<integrator type="normals">
+  <ref id="scene"/>
+  <image id="glass_normals"/>
+  <sampler type="independent" count="8"/>
+</integrator>
+<integrator type="albedos">
+  <ref id="scene"/>
+  <image id="glass_albedos"/>
+  <sampler type="independent" count="8"/>
+</integrator>
+<postprocess type="denoising">
+  <ref name="input" id="glass_8_samples"/>
+  <ref name="normals" id="glass_normals"/>
+  <ref name="albedos" id="glass_albedos"/>
+  <image id="glass_denoised_8"/>
+</postprocess>

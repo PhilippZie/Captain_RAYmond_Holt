@@ -1,0 +1,124 @@
+<scene id="scene">
+  <camera type="perspective">
+    <integer name="width" value="1920"/>
+    <integer name="height" value="1080"/>
+    <float name="fov" value="50"/>
+    <string name="fovAxis" value="x"/>
+    <transform>
+      <matrix value="-1.3049e-07,0.21543,-0.97652,5.8754,  1,9.3072e-10,-8.5651e-08,-0.3587,  1.9939e-08,-0.97652,-0.21543,1.985,  0,0,0,1"/>
+    </transform>
+  </camera>
+  <instance>
+    <bsdf type="diffuse">
+      <texture name="albedo" type="constant" value="0.8,0.054894,0.054894"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/005.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,-0.031019,  14.072,2.787,0,-0.04216,  0,0,14.345,0.7268,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="diffuse">
+      <texture name="albedo" type="constant" value="0.2097,0.8,0.11717"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/006.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,-0.0039515,  14.072,2.787,0,-0.019953,  0,0,14.345,0.35117,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="diffuse">
+      <texture name="albedo" type="constant" value="0.8,0.63627,0.09688"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/075.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,0.0001502,  14.072,2.787,0,-0.020765,  0,0,14.345,0.60432,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0,0,0"/>
+      <texture name="roughness" type="constant" value="0"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="1"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/0.074.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,0.79718,  14.072,2.787,0,-0.17862,  0,0,14.345,1.0297,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="diffuse">
+      <texture name="albedo" type="constant" value="0.024514,0.024514,0.024514"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/1.074.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,0.79718,  14.072,2.787,0,-0.17862,  0,0,14.345,1.0297,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf id="Material_006" type="diffuse">
+      <texture name="albedo" type="constant" value="0.35469,0.1469,0.055728"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.021.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,-0.0039515,  14.072,2.787,0,-0.019953,  0,0,14.345,0.18802,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="diffuse">
+      <texture name="albedo" type="constant" value="0.096555,0.039574,0.010919"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.020.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,-0.0039515,  14.072,2.787,0,-0.019953,  0,0,14.345,0.49943,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <ref id="Material_006"/>
+    <shape type="mesh" filename="meshes/Cube.019.ply"/>
+    <transform>
+      <matrix value="2.787,-14.072,0,0.02664,  14.072,2.787,0,-0.026012,  0,0,14.345,1.1772,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <light type="point" position="4.0762,1.0055,5.9039" power="1000,1000,1000"/>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.90423,0.90423,0.90423"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Plane.ply"/>
+    <transform>
+      <matrix value="10,0,0,0,  0,15,0,0,  0,0,1,0,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <light type="envmap">
+    <texture type="constant" value="0.44325,0.44325,0.44325"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+    </transform>
+  </light>
+</scene>
+<integrator type="pathtracer" depth="5" nee="true" mis="true">
+  <ref id="scene"/>
+  <image id="burger_128_samples"/>
+  <sampler type="independent" count="128"/>
+</integrator>
+<integrator type="normals">
+  <ref id="scene"/>
+  <image id="burger_normals"/>
+  <sampler type="independent" count="128"/>
+</integrator>
+<integrator type="albedos">
+  <ref id="scene"/>
+  <image id="burger_albedos"/>
+  <sampler type="independent" count="128"/>
+</integrator>
+<postprocess type="denoising">
+  <ref name="input" id="burger_128_samples"/>
+  <ref name="normals" id="burger_normals"/>
+  <ref name="albedos" id="burger_albedos"/>
+  <image id="burger_denoised_128"/>
+</postprocess>

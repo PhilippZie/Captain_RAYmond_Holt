@@ -1,0 +1,151 @@
+<scene id="scene">
+  <camera type="perspective">
+    <integer name="width" value="1080"/>
+    <integer name="height" value="720"/>
+    <float name="fov" value="80"/>
+    <string name="fovAxis" value="x"/>
+    <transform>
+      <matrix value="0.73267,0.052696,-0.67854,2.2727,  0.68058,-0.056729,0.73047,-6.6387,  2.5794e-08,-0.997,-0.077427,4.2609,  0,0,0,1"/>
+    </transform>
+  </camera>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.0053446,0.0053446,0.0053446"/>
+      <texture name="roughness" type="constant" value="0.6"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.005.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0,-1.9466,  3,-1.3113e-07,0,-4.8646,  0,0,3,1.671,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf id="Si_ge th_atre - Velvet_001" type="principled">
+      <texture name="baseColor" type="constant" value="0.1913,0.0051925,0.0028996"/>
+      <texture name="roughness" type="constant" value="0.5"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.16667"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Plane.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0.0057675,-2.5042,  3,-1.3113e-07,2.5211e-10,-4.8646,  -1.2806e-18,0.0057675,3,3.0873,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <ref id="Si_ge th_atre - Velvet_001"/>
+    <shape type="mesh" filename="meshes/Cube.006.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0,-2.4405,  3,-1.3113e-07,0,-4.8646,  0,0,3,3.3237,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <ref id="Si_ge th_atre - Velvet_001"/>
+    <shape type="mesh" filename="meshes/Cube.007.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0,-1.387,  3,-1.3113e-07,0,-4.8646,  0,0,3,2.1463,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <ref id="Si_ge th_atre - Velvet_001"/>
+    <shape type="mesh" filename="meshes/Cube.008.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0,-1.8534,  3,-1.3113e-07,0,-4.0793,  0,0,3,2.5312,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.0053446,0.0053446,0.0053446"/>
+      <texture name="roughness" type="constant" value="0.6"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.009.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0,-1.9466,  3,-1.3113e-07,0,-6.4403,  0,0,3,1.671,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <ref id="Si_ge th_atre - Velvet_001"/>
+    <shape type="mesh" filename="meshes/Plane.001.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0.0057675,-2.5042,  3,-1.3113e-07,2.5211e-10,-6.4403,  -1.2806e-18,0.0057675,3,3.0873,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <ref id="Si_ge th_atre - Velvet_001"/>
+    <shape type="mesh" filename="meshes/Cube.010.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0,-2.4405,  3,-1.3113e-07,0,-6.4403,  0,0,3,3.3237,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <ref id="Si_ge th_atre - Velvet_001"/>
+    <shape type="mesh" filename="meshes/Cube.011.ply"/>
+    <transform>
+      <matrix value="-1.3113e-07,-3,0,-1.387,  3,-1.3113e-07,0,-6.4403,  0,0,3,2.1463,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="image" filename="textures/grass_color.jpg"/>
+      <texture name="roughness" type="image" filename="textures/grass_roughness.jpg" linear="true"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <texture name="normal" type="image" filename="textures/grass_normal.jpg" linear="true"/>
+    <shape type="mesh" filename="meshes/Plane.003.ply"/>
+    <transform>
+      <matrix value="30.865,0,0,-13.79,  0,12.702,0,10.73,  0,0,1,0,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <light type="directional" direction="0.20522,0.5778,0.78996" intensity="4,4,4"/>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="image" filename="textures/Wood_basecolor.jpg"/>
+      <texture name="roughness" type="image" filename="textures/Wood_roughness.jpg" linear="true"/>
+      <texture name="metallic" type="constant" value="0"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <texture name="normal" type="image" filename="textures/Wood_normal.jpg" linear="true"/>
+    <shape type="mesh" filename="meshes/Cube.ply"/>
+    <transform>
+      <matrix value="3,0,0,0,  0,3,0,-6.7071,  0,0,2.5,3.5,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="principled">
+      <texture name="baseColor" type="constant" value="0.30391,0.30391,0.30391"/>
+      <texture name="roughness" type="constant" value="0.30667"/>
+      <texture name="metallic" type="constant" value="0.45333"/>
+      <texture name="specular" type="constant" value="0.5"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.003.ply"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,0.5,0,-3.8148,  0,0,1,3.9571,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <instance>
+    <bsdf type="roughdielectric">
+      <texture name="ior" type="constant" value="1.45"/>
+      <texture name="transmittance" type="constant" value="1,1,1"/>
+      <texture name="reflectance" type="constant" value="1,1,1"/>
+      <texture name="roughness" type="constant" value="0.075"/>
+    </bsdf>
+    <shape type="mesh" filename="meshes/Cube.004.ply"/>
+    <transform>
+      <matrix value="0.98,0,0,0,  0,0.1,0,-3.8148,  0,0,0.98,3.9571,  0,0,0,1"/>
+    </transform>
+  </instance>
+  <light type="envmap">
+    <texture type="image" filename="textures/cloudy_sky_2K_957e2384-f201-45fe-82ee-5392e051b306.exr.exr" border="clamp" linear="true"/>
+    <transform>
+      <matrix value="1,0,0,0,  0,0,1,0,  0,-1,0,0,  0,0,0,1"/>
+    </transform>
+  </light>
+</scene>
+<integrator type="pathtracer" depth="20" nee="true" mis="true">
+  <ref id="scene"/>
+  <image id="mit_rough_glas"/>
+  <sampler type="independent" count="32"/>
+</integrator>

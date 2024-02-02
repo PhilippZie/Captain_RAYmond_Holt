@@ -1,0 +1,52 @@
+    <integrator type="direct">
+        <scene id="scene">
+            <camera type="perspective" id="camera">
+                <integer name="width" value="512"/>
+                <integer name="height" value="512"/>
+
+                <string name="fovAxis" value="x"/>
+                <float name="fov" value="30"/>
+
+                <transform>
+                    <rotate axis="1,0,0" angle="-2.5"/>
+                    <translate z="-5"/>
+                </transform>
+            </camera>
+
+        <light type="area">
+            <instance>
+            <shape type="rectangle"/>
+            <transform>
+                <matrix value="0.5,0,-0,0,  0,0.21145,-0.90618,0,  0,-0.45309,-0.4229,1.3319,  0,0,0,1"/>
+            </transform>
+            <emission type="lambertian">
+                <texture name="emission" type="constant" value="2.5,2.5,2.5"/>
+            </emission>
+            </instance>
+        </light>
+                
+            <instance>
+                <shape type="mesh" filename="../../tests/meshes/bunny.ply"/>
+                <bsdf type="diffuse">
+                    <texture name="albedo" type="constant" value="1"/>
+                </bsdf>
+                <transform>
+                    <rotate axis="1,0,0" angle="90"/>
+                    <translate x="0.18" y="1.03"/>
+                </transform>
+            </instance>
+            <instance>
+                <shape type="rectangle"/>
+                <bsdf type="diffuse">
+                    <texture name="albedo" type="constant" value="1"/>
+                </bsdf>
+                <transform>
+                    <rotate axis="1,0,0" angle="90"/>
+                    <scale value="10"/>
+                    <translate y="1"/>
+                </transform>
+            </instance>
+        </scene>
+        <image id="arealight"/>
+        <sampler type="independent" count="64"/>
+    </integrator>

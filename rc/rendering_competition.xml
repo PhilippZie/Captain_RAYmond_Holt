@@ -1,7 +1,7 @@
 <scene id="scene">
   <camera type="perspective">
-    <integer name="width" value="1080"/>
-    <integer name="height" value="608"/>
+    <integer name="width" value="2560"/>
+    <integer name="height" value="1440"/>
     <float name="fov" value="90"/>
     <string name="fovAxis" value="x"/>
     <transform>
@@ -865,7 +865,7 @@
   <sampler type="independent" count="100"/>
 </integrator>
 <postprocess type="denoising">
-  <ref name="input" id="rc_500spp"/>
+  <ref name="input" id="rc_400spp"/>
   <ref name="normals" id="prot_normals"/>
   <ref name="albedos" id="prot_albedos"/>
   <image id="rc_400spp_denoised"/>

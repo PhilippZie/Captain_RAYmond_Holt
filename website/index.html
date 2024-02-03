@@ -6,12 +6,13 @@
 -->
 <html>
 	<head>
-		<title>Paradigm Shift by HTML5 UP</title>
+		<title>Journey To The Unkown</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/ultra_denoised.jpg" />
 	</head>
 	<body class="is-preload">
 
@@ -21,6 +22,7 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
+							<h2>CG1 Rendering Competion: </h2>
 							<h1>JOURNEY TO THE UNKNOWN</h1>
 							<h3><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Download</a></h3>
 							<ul class="actions">
@@ -34,11 +36,9 @@
 
 				<!-- Section -->
 					<section id="first">
-						<center>
 							<header>
 								<h2>The Orient Express?</h2>
 							</header>
-						</center>
 						<div class="content">
 							<p><strong>Or the Transsiberian Railway or the Hogwarts express?</strong> We also don't know where this train is heading to. It doesn't seem to be realistic for Hogwarts students to drink whiskey or smoke pipes on their train ride, so it might be the train compartment of a person travelling from Paris to Istanbul or from Moscow to Wladiwostok.</p>
 							<div class="gallery">
@@ -53,7 +53,7 @@
 							<h2>Specs</h2>
 						</header>
 						<div class="content">
-							<p><strong>More than one dozen prototypes</strong> were necessary until we settled with this final scene</p>
+							<p><strong>More than one dozen prototypes</strong> were necessary until we settled with this final scene.</p>
 							<ul class="feature-icons">
 								<li class="icon solid fa-laptop">M1 MacBook Air</li>
 								<li class="icon solid fa-play">10000 Meshes</li>
@@ -62,17 +62,15 @@
 								<li class="icon solid fa-clock">8 hours rendertime</li>
 								<li class="icon solid fa-mug-hot">12 liters of coffee converted to code</li>
 							</ul>
-							<p>Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
+							<p></p>
 						</div>
 					</section>
 					<!-- Section -->
-					<section>
-						<center>
+					<section id="Prototypes">
 							<header>
-								<h3>Prototypes</h3>
+								<h2>Prototypes</h2>
 								<p>Here, you can see the gradual progress our scene made through the process. From the initial idea to the final scene. </p>
 							</header>
-						</center>
 							<div class="content">
 								<div class="gallery">
 									<a href="images/prot1.jpg"><img src="images/prot1.jpg" alt="" /></a>
@@ -93,12 +91,14 @@
 
 							<!-- Section -->
 								<section id="roughdielectric">
-								<center>
 									<header>
 										<h3>Rough dielectric</h3>
-										<p>We decided to implement the rough dielectric because it looks very interesting. You can see the basic idea in the two bunny pictures on the right. It also makes beautiful subtle details possible. For example look a bit more closely to the whiskey bottle as well as the ice cubes in the glass. The left of the pictures features only regular dielectrics. In the picture on the right, the Bottle is rendered with a roughness of 0.15 and the ice cubes are rendered with a roughness of 0.4. The glass pane is rendered with a roughness of 0.06</p>
+										<p>We decided to implement the rough dielectric because it looks very interesting. 
+											You can see the basic idea in the two bunny pictures on the right. 
+											It also makes beautiful subtle details possible. For example look a bit more closely to the whiskey bottle as well as the ice cubes in the glass. 
+											The left pictures features only regular dielectrics. In the pictures on the right, the Bottle is rendered with a roughness of 0.15 and 
+											the ice cubes are rendered with a roughness of 0.4. The glass pane is rendered with a roughness of 0.06</p>
 									</header>
-								</center>
 									<div class="content">
 										<div class="gallery">
 											<a href="images/bunny_dielectric.jpg"><img src="images/bunny_dielectric.jpg" alt="" /></a>
@@ -111,12 +111,12 @@
 
 							<!-- Section -->
 								<section>
-								<center>
 									<header>
 										<h3>Shading Normals</h3>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam sed facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet mauris. Ut magna finibus nisi nec lacinia ipsum maximus.</p>
+										<p>Using normals for shading is a really simple way of adding extra detail to textures without building complicated meshes. So it was clear that we should implement it.
+											As one can see adding a normal map to a brickwall makes it look more realistic with a certain amount of depth to it, although the underlying mesh stays the same.
+										</p>
 									</header>
-								</center>
 									<div class="content">
 										<div class="gallery">
 											<a href="images/shading_normals_before.jpg"><img src="images/shading_normals_before.jpg" alt="" /></a>
@@ -130,28 +130,32 @@
 							<!-- Section -->
 
 								<section>
-									<center>
 									<header>
 										<h3>Area Light sampling</h3>
-										<p>We implemented Basic area light sampling because we wanted to use an Area Light for the train interior. An Area Light produces less noise than a point light inside the train. Furthermore the Sunlight in our scene looked better with an area light than with a directional light or a point light. </p>
+										<p>We wanted to use an area light for the train interior, so we implemented basic area light sampling.
+											An Area Light produces less noise than a point light inside the train. 
+											Furthermore the Sunlight in our scene looked better with an area light than with a directional or a point light.
+											It casts smoother shadows on the train seats, which looks more realistic. </p>
 									</header>
-								</center>
 									<div class="content">
 										<div class="gallery">
 											<a href="images/sphere_lambertian.jpg"><img src="images/sphere_lambertian.jpg" alt="" /></a>
 											<a href="images/sphere_arealight.jpg"><img src="images/sphere_arealight.jpg" alt="" /></a>
+											<a href="images/area_light_inside.jpg"><img src="images/area_light_inside.jpg"></a>
+											<a href="images/area_light_smooth_shadow.jpg"><img src="images/area_light_smooth_shadow.jpg"></a>
+
 										</div>
 									</div>
 								</section>
 
 
 								<section>
-									<center>
 									<header>
 										<h3>Denoising</h3>
-										<p>Denoising is probably one of the features with the highest impact. Especially with the rough dielectric, which can produce quite some noise in the scene, for example when point lights are involved. Therefore we thought this feature is a must.</p>
+										<p>Denoising is probably one of the features with the highest impact. Especially with the rough dielectric, 
+											which can produce quite some noise in the scene, for example when point lights are involved. 
+											Therefore we thought this feature is a must.</p>
 									</header>
-								</center>
 									<div class="content">
 										<div class="gallery">
 											<a href="images/glass_noisy.jpg" class="portait"><img src="images/glass_noisy.jpg" alt="" /></a>
@@ -168,11 +172,14 @@
 							<h2>About</h2>
 						</header>
 						<div class="content">
-							<p><strong>Julian Tonner and Philipp Ziegler</strong> are computer science students at Saarland University</p>
-							<ul class="actions">
+							<p><strong>Julian Tonner and Philipp Ziegler</strong> are computer science students at Saarland University.
+							<br>This project was part of the Computer Graphics 1 course.</p>
+							
+							<!--<ul class="actions">
 								<li><a href="#" class="button primary large">Get Started</a></li>
 								<li><a href="#" class="button large">Learn More</a></li>
 							</ul>
+							-->
 						</div>
 					</section>
 
@@ -447,28 +454,54 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 				<!-- Section -->
 					<section>
 						<header>
-							<h2>Get in touch</h2>
+							<h2>Credits</h2>
 						</header>
 						<div class="content">
-							<p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
-							<form>
-								<div class="fields">
-									<div class="field half">
-										<input type="text" name="name" id="name" placeholder="Name" />
+							<p>All assets and materials we used are from <a href="https://www.blenderkit.com/"><strong>blenderkit.com</strong></a></p>
+							<div class="content">
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>
+														<h4>Models</h4>
+														<ul>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/37bfe7ae-876c-4ed6-9286-aa4bd01a4435/">Train chairs</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/f4b508fa-5977-478c-beaf-de7fc5ef5aae/">Storage Compartment</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/abb12efb-e03d-487c-9adf-a3d163f9465d/">Suitcase</a></li>
+															<li><a href="">Leather Bag</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/ebaa1b5b-7eda-4b89-acf9-99ef976709fe/">Curtains</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/79f3aee3-c7cd-4e8d-be9e-0cf14b094a57/">Railway</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/e687524a-06ff-4d65-8393-f6c206462501/">Railway Signal</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/51d496cc-10db-49c4-b17d-650d851adc10/">Whiskey Bottle</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/c2bc2210-75b2-4c72-af1b-f679556640d9/">Whiskey Glass</a></li>
+															<li><a href="https://www.blenderkit.com/get-blenderkit/d0e9d18c-6873-4fb7-952f-bd6ded1f4f62/">Smoking Pipe</a></li>
+															<li><a href="">Trees</a></li>
+														</ul>
+													</th>
+													<th>
+														<h4>Materials</h4>
+														<ul>
+															<li><a href="">Snow</a></li>
+															<li><a href="">Interior</a></li>
+															<li><a href="">Leather Seats</a></li>
+															<li><a href="">Wood Table</a></li>
+															<li><a href="">Curtains</a></li>
+														</ul>
+													</th>
+												</tr>
+											</thead>
+										</table>
 									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
-								</ul>
-							</form>
+							</div>
 						</div>
-						<footer>
+					</section>
+
+				<!-- Section -->
+				<!--
+				<section>
+					
+					<footer>
 							<ul class="items">
 								<li>
 									<h3>Email</h3>
@@ -476,21 +509,24 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									<a href="#">phzi00001@stud.uni-saarland.de</a>
 								</li>
 								<li>
-									<h3>Elsewhere</h3>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
-								</li>
-							</ul>
-						</footer>
-					</section>
-
+										<h3>GitHub</h3>
+										<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</li>
+								</ul>
+							</footer>
+						</section>
+					-->
 				<!-- Copyright -->
-					<div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
-
+					<div class="copyright">
+						&copy; Julian Tonner & Philipp Ziegler. Design by  
+						<a href="https://html5up.net">HTML5 UP</a>. 
+						<br>
+						<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="icon brands fa-github"> GitHub Repository</a>
+					</div>
 			</div>
 
 		<!-- Scripts -->

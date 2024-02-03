@@ -238,7 +238,9 @@ input, select, textarea {
 	}
 
 	h5 {
-		font-size: 0.75rem;
+		font-size: 2.4rem;
+		font-weight: 800;
+
 	}
 
 	h6 {
@@ -3422,14 +3424,18 @@ input, select, textarea {
 				color: inherit;
 			}
 
+			#wrapper .copyright > .icons {
+				color: rgba(0, 0, 0, 0.185);
+			}
 		#wrapper section {
 			margin: 7.5rem 0 0 0;
 		}
 
 			#wrapper section > header {
 				padding: 0 2rem 0 5rem;
-				width: 35rem;
+				width: 35vw;
 			}
+			
 
 			#wrapper section > .content {
 				padding: 0 5rem;

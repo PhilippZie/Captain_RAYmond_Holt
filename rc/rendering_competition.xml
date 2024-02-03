@@ -849,24 +849,24 @@
     </transform>
   </light>
 </scene>
-<integrator type="pathtracer" depth="40" nee="true" mis="true">
+<integrator type="pathtracer" depth="20" nee="true" mis="true">
   <ref id="scene"/>
-  <image id="depth_test2"/>
-  <sampler type="independent" count="50"/>
+  <image id="rc_400spp"/>
+  <sampler type="independent" count="400"/>
 </integrator>
 <integrator type="normals">
   <ref id="scene"/>
   <image id="prot_normals"/>
-  <sampler type="independent" count="50"/>
+  <sampler type="independent" count="100"/>
 </integrator>
 <integrator type="albedos">
   <ref id="scene"/>
   <image id="prot_albedos"/>
-  <sampler type="independent" count="50"/>
+  <sampler type="independent" count="100"/>
 </integrator>
 <postprocess type="denoising">
-  <ref name="input" id="depth_test2"/>
+  <ref name="input" id="rc_500spp"/>
   <ref name="normals" id="prot_normals"/>
   <ref name="albedos" id="prot_albedos"/>
-  <image id="depth_test_denoised2"/>
+  <image id="rc_400spp_denoised"/>
 </postprocess>

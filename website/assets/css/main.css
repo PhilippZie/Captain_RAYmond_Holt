@@ -238,7 +238,9 @@ input, select, textarea {
 	}
 
 	h5 {
-		font-size: 0.75rem;
+		font-size: 2.4rem;
+		font-weight: 800;
+
 	}
 
 	h6 {
@@ -2958,11 +2960,11 @@ input, select, textarea {
 			}
 
 				.gallery a.landscape img {
-					height: 30vw;
+					height: 25vw;
 				}
 
 			.gallery a.portrait img {
-				height: 30vw;
+				height: 25vw;
 			}
 
 			.gallery a.full {
@@ -3293,7 +3295,7 @@ input, select, textarea {
 				grid-area: content;
 				max-width: 80rem;
 				position: relative;
-
+				text-align: justify;
 			}
 			
 
@@ -3422,13 +3424,21 @@ input, select, textarea {
 				color: inherit;
 			}
 
+			#wrapper .copyright > .icons {
+				color: rgba(0, 0, 0, 0.185);
+			}
 		#wrapper section {
 			margin: 7.5rem 0 0 0;
 		}
 
 			#wrapper section > header {
 				padding: 0 2rem 0 5rem;
-				width: 35rem;
+				width: 35vw;
+			}
+			
+
+			#wrapper section > header > p {
+				text-align: justify;
 			}
 
 			#wrapper section > .content {
@@ -3627,9 +3637,9 @@ input, select, textarea {
 						background-size: auto;
 					}
 
-						#wrapper > section > header > * {
+						/*#wrapper > section > header > * {
 							max-width: 25rem;
-						}
+						}*/
 
 						#wrapper > section > header > :last-child {
 							margin-bottom: 0;
@@ -3772,6 +3782,11 @@ input, select, textarea {
 
 			#wrapper .copyright {
 				padding: 0 2rem 2rem 2rem;
+			}
+
+			#wrapper section > header > p {
+				text-align: justify;
+				width: 100vw
 			}
 
 		}

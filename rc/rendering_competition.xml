@@ -339,11 +339,10 @@
     </transform>
   </instance>
   <instance>
-    <bsdf id="Bottle" type="roughdielectric">
+    <bsdf id="Bottle" type="dielectric">
       <texture name="ior" type="constant" value="1.45"/>
       <texture name="transmittance" type="constant" value="1,1,1"/>
       <texture name="reflectance" type="constant" value="1,1,1"/>
-      <texture name="roughness" type="constant" value="0.15"/>
     </bsdf>
     <shape type="mesh" filename="meshes/Cube.023.ply"/>
     <transform>
@@ -781,7 +780,7 @@
       <texture name="baseColor" type="image" filename="textures/snow_02_diff_8k.jpg"/>
       <texture name="roughness" type="image" filename="textures/snow_02_rough_8k.jpg" linear="true"/>
       <texture name="metallic" type="constant" value="0"/>
-      <texture name="specular" type="constant" value="0.5"/>
+      <texture name="specular" type="constant" value="0.05"/>
     </bsdf>
     <texture name="normal" id="snow_02.000" type="image" filename="textures/snow_02_nor_4k.png.exr" linear="true"/>
     <shape type="mesh" filename="meshes/Plane.003.ply"/>
@@ -817,7 +816,7 @@
         <matrix value="2.5,0,-0,0,  0,0.052099,0.71934,-9.32,  0,0.05395,-0.69466,5.6299,  0,0,0,1"/>
       </transform>
       <emission type="lambertian">
-        <texture name="emission" type="constant" value="83.333,83.333,83.333"/>
+        <texture name="emission" type="constant" value="83,70,50"/>
       </emission>
     </instance>
   </light>
@@ -851,8 +850,8 @@
 </scene>
 <integrator type="pathtracer" depth="20" nee="true" mis="true">
   <ref id="scene"/>
-  <image id="rc_400spp"/>
-  <sampler type="independent" count="400"/>
+  <image id="rc_500spp_final"/>
+  <sampler type="independent" count="500"/>
 </integrator>
 <integrator type="normals">
   <ref id="scene"/>
@@ -865,8 +864,8 @@
   <sampler type="independent" count="100"/>
 </integrator>
 <postprocess type="denoising">
-  <ref name="input" id="rc_400spp"/>
+  <ref name="input" id="rc_500spp_final"/>
   <ref name="normals" id="prot_normals"/>
   <ref name="albedos" id="prot_albedos"/>
-  <image id="rc_400spp_denoised"/>
+  <image id="rc_500spp_final_denoised"/>
 </postprocess>

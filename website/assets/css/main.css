@@ -3295,7 +3295,7 @@ input, select, textarea {
 				grid-area: content;
 				max-width: 80rem;
 				position: relative;
-
+				text-align: justify;
 			}
 			
 
@@ -3436,6 +3436,10 @@ input, select, textarea {
 				width: 35vw;
 			}
 			
+
+			#wrapper section > header > p {
+				text-align: justify;
+			}
 
 			#wrapper section > .content {
 				padding: 0 5rem;
@@ -3633,9 +3637,9 @@ input, select, textarea {
 						background-size: auto;
 					}
 
-						#wrapper > section > header > * {
+						/*#wrapper > section > header > * {
 							max-width: 25rem;
-						}
+						}*/
 
 						#wrapper > section > header > :last-child {
 							margin-bottom: 0;
@@ -3778,6 +3782,11 @@ input, select, textarea {
 
 			#wrapper .copyright {
 				padding: 0 2rem 2rem 2rem;
+			}
+
+			#wrapper section > header > p {
+				text-align: justify;
+				width: 100vw
 			}
 
 		}

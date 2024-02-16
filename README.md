@@ -4,7 +4,7 @@ Captain RAYmond Holt is a renderer me and my fellow student Julian programmed in
 
 # Submission for the course's rendering competition (2nd place)
 ![final](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/8976ec53-506e-4d50-add0-c4a58d77fdec)
-You can find the website where we describe the features in depth here: https://philippzie.github.io/Captain_RAYmond_Holt/
+You can find the website where we describe the features in depth here: https://philippzie.github.io/Captain_RAYmond_Holt/index.html
 
 # Burger with Diffuse material
 ![burger](https://github.com/PhilippZie/Captain_RAYmond_Holt/assets/126791104/07a78758-591d-40c9-ad2b-64a1f3fb5042)
